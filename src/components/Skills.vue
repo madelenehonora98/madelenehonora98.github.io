@@ -7,11 +7,19 @@
         <div class="border border-sky-200 rounded-lg p-4">
           <h2 class="text-xl font-semibold text-sky-700 mb-3">Frontend</h2>
           <ul class="text-gray-600 space-y-1">
+            <li>• JavaScript</li>
             <li>• Vue.js</li>
             <li>• React</li>
-            <li>• JavaScript</li>
             <li>• TypeScript</li>
             <li>• Tailwind CSS</li>
+          </ul>
+        </div>
+
+        <div class="border border-sky-200 rounded-lg p-4">
+          <h2 class="text-xl font-semibold text-sky-700 mb-3">Backend</h2>
+          <ul class="text-gray-600 space-y-1">
+            <li>• Java</li>
+            <li>• C#</li>
           </ul>
         </div>
 
@@ -20,7 +28,7 @@
           <ul class="text-gray-600 space-y-1">
             <li>• Git</li>
             <li>• Vite</li>
-            <li>• npm/yarn</li>
+            <li>• npm</li>
             <li>• VS Code</li>
           </ul>
         </div>
