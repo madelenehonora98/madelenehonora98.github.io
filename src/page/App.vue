@@ -1,29 +1,32 @@
 <template>
-  <div class="flex flex-col md:flex-row min-h-screen">
-    <!-- <Sidebar />
-    <main
-      id="home"
-      class="flex-1 flex flex-col items-center justify-center p-8"
-    >
-      <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-600 mb-4">
-          Full Name
-        </h1>
-        <div class="flex flex-col items-center gap-2 text-lg">
-          <span class="text-gray-600">Hi! Welcome to my page :D</span>
-          <span class="font-semibold text-indigo-700"
-            >Front-End Engineer — Ready for work!!</span
-          >
-        </div>
-      </div>
-
-      <AboutSection />
-    </main> -->
+  <div>
+    <Loader :loading="isLoading" />
+    <LandingPage v-if="isLanding" @enterPage="enterPage"/>
+    <div class="flex flex-col md:flex-row min-h-screen" v-else>
+      <Sidebar />
+      <main class="flex-1 min-h-screen">
+        <router-view v-slot="{ Component, route }">
+          <transition name="fade" mode="out-in">
+            <component :is="Component" :key="route.path" />
+          </transition>
+        </router-view>
+      </main>
+    </div>
   </div>
 </template>
 
 <script src="./js/app.js"></script>
 
 <style lang="scss" scoped>
-  @use '../assets/css/main.scss' as *;
+@use "@/assets/css/main.scss" as *;
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>

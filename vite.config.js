@@ -6,15 +6,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
-    viteExternalsPlugin({
-      'vue-resource': 'VueResource',
-      vue: 'Vue3',
-      'vue-router': 'Vue3Router',
-      pinia: 'pinia',
-      lozad: 'lozad',
-      'vue-i18n': 'Vue3I18n'
-    })
+    vue()
   ],
   resolve: {
     alias: {
