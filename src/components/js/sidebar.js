@@ -1,4 +1,4 @@
-import { ref, onMounted, watch, defineExpose } from "vue"
+import { ref, onMounted, watch } from "vue"
 import { useRouter } from "vue-router"
 import { usePageStore } from "@/stores/page"
 
@@ -29,11 +29,6 @@ export default {
 
     watch(() => router.currentRoute.value.path, () => {
       collapseOnMobile()
-    })
-
-    defineExpose({
-      toggleSidebar,
-      isExpanded
     })
 
     return {
