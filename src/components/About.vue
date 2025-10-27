@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-50 to-white text-gray-800 p-8">
     <div class="text-center mb-8">
-      <span class="text-blue-600">Hi! My name is</span>
+      <span class="text-sky-800">Hi! My name is</span>
       <h1 class="text-4xl font-extrabold text-sky-600 mb-4 tracking-wide">
         Madelene Honora
       </h1>
