@@ -1,18 +1,39 @@
-import { ref, onMounted } from "vue"
+import { ref, onMounted, watch, defineExpose } from "vue"
+import { useRouter } from "vue-router"
 import { usePageStore } from "@/stores/page"
 
 export default {
   name: "Sidebar",
   setup() {
-    const isExpanded = ref(true)
+    const isExpanded = ref(false)
     const { updateLoading } = usePageStore()
+    const router = useRouter()
 
     const toggleSidebar = () => {
       isExpanded.value = !isExpanded.value
     }
 
+    const isMobile = () => {
+      return window.innerWidth < 768
+    }
+
+    const collapseOnMobile = () => {
+      if (isMobile()) {
+        isExpanded.value = false
+      }
+    }
+
     onMounted(() => {
       updateLoading(false)
+    })
+
+    watch(() => router.currentRoute.value.path, () => {
+      collapseOnMobile()
+    })
+
+    defineExpose({
+      toggleSidebar,
+      isExpanded
     })
 
     return {

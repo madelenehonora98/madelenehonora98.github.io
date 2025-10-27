@@ -1,8 +1,14 @@
 <template>
+  <div
+    v-if="isExpanded"
+    class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+    @click="toggleSidebar"
+  ></div>
   <aside
     :class="[
-      'min-h-screen bg-sky-600 text-white flex flex-col py-8 transition-all duration-300',
-      isExpanded ? 'w-60' : 'w-20'
+      'min-h-screen bg-sky-600 text-white flex flex-col py-8 transition-all duration-300 z-50',
+      'fixed md:relative top-0 left-0',
+      isExpanded ? 'w-60' : '-translate-x-full md:translate-x-0 md:w-20'
     ]"
   >
     <div class="flex justify-end px-4 mb-4">
