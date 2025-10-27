@@ -8,7 +8,7 @@
           <h2 class="text-xl font-semibold text-sky-700 mb-3">Frontend</h2>
           <ul class="text-gray-600 space-y-1">
             <li>• JavaScript</li>
-            <li>• Vue.js</li>
+            <li>• Vue.js (2 & 3)</li>
             <li>• React</li>
             <li>• TypeScript</li>
             <li>• Tailwind CSS</li>

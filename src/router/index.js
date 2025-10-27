@@ -4,8 +4,9 @@ import components from '@/data/components'
 const routes = [
   { path: '/', name: 'About', component: components.About },
   { path: '/skills', name: 'Skills', component: components.Skills },
-  { path: '/projects', name: 'Projects', component: components.Projects },
   { path: '/experiences', name: 'Experiences', component: components.Experiences },
+  { path: '/projects', name: 'Projects', component: components.Projects },
+  { path: '/achievements', name: 'Achievements', component: components.Achievements },
   { path: '/contact', name: 'Contact', component: components.Contact },
 ]
 
