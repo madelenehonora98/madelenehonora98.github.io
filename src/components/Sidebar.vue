@@ -103,8 +103,7 @@
         <span v-if="isExpanded">Skills & Tools</span>
       </router-link>
 
-      <!-- TODO: Update Projects and uncomment below codes -->
-      <!-- <router-link
+      <router-link
         to="/projects"
         :class="[
           'flex items-center gap-3 hover:bg-sky-500 rounded-lg py-2 transition-all duration-200',
@@ -126,7 +125,7 @@
           />
         </svg>
         <span v-if="isExpanded">Projects</span>
-      </router-link> -->
+      </router-link>
 
       <router-link
         to="/experiences"

@@ -1,30 +1,61 @@
 <template>
-  <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-50 to-white text-gray-800 p-8">
-    <section class="p-8 bg-white shadow-md rounded-2xl max-w-3xl mx-auto w-full">
-      <h1 class="text-3xl font-bold text-sky-600 mb-6 text-center">Projects & Portfolio</h1>
-      
+  <div
+    class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-50 to-white text-gray-800 p-8"
+  >
+    <section
+      class="p-8 bg-white shadow-md rounded-2xl max-w-3xl mx-auto w-full"
+    >
+      <h1 class="text-3xl font-bold text-sky-600 mb-6 text-center">
+        Projects & Portfolio
+      </h1>
+
       <div class="space-y-6">
         <div class="border border-sky-200 rounded-lg p-6">
-          <h2 class="text-xl font-semibold text-sky-700 mb-2">Project Name</h2>
-          <p class="text-gray-600 mb-3">A brief description of your project goes here.</p>
+          <div class="mb-2">
+            <h2 class="text-xl font-semibold text-sky-700">
+              Maranatha lecturer portofolio android application
+            </h2>
+            <span class="text-l text-sky-700 font-bold"
+              >at Maranatha Christian University</span
+            >
+          </div>
+          <p class="text-gray-600 mb-3">
+            Android application where department of informatics can easily track
+            and monitor document submission using <b>OCR</b> implementation for
+            accreditation purposes.
+          </p>
           <div class="flex gap-2">
-            <a href="#" class="text-sky-600 hover:underline">Live Demo</a>
-            <span class="text-gray-400">|</span>
-            <a href="#" class="text-sky-600 hover:underline">GitHub</a>
+            <a
+              href="https://github.com/madelenehonora98/SisterUniversitasKristenMaranatha"
+              class="text-sky-600 hover:underline"
+              >GitHub</a
+            >
           </div>
         </div>
 
         <div class="border border-sky-200 rounded-lg p-6">
-          <h2 class="text-xl font-semibold text-sky-700 mb-2">Project Name</h2>
-          <p class="text-gray-600 mb-3">A brief description of your project goes here.</p>
+          <div class="mb-2">
+            <h2 class="text-xl font-semibold text-sky-700">
+              Pemberkatan GBI Sukawarna android application
+            </h2>
+            <span class="text-l text-sky-700 font-bold"
+              >at GBI SUkawarna aruna</span
+            >
+          </div>
+          <p class="text-gray-600 mb-3">
+            Android application where wedding staff manage and track
+            church-based wedding events, includes venue scheduling and staff
+            allocation
+          </p>
           <div class="flex gap-2">
-            <a href="#" class="text-sky-600 hover:underline">Live Demo</a>
-            <span class="text-gray-400">|</span>
-            <a href="#" class="text-sky-600 hover:underline">GitHub</a>
+            <a
+              href="https://github.com/madelenehonora98/AplikasiJadwalPernikahanGBI"
+              class="text-sky-600 hover:underline"
+              >GitHub</a
+            >
           </div>
         </div>
       </div>
     </section>
   </div>
 </template>
-
