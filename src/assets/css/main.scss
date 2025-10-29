@@ -3,10 +3,28 @@
 @tailwind utilities;
 
 $primary: #4f46e5;
-$bg: #f9fafb;
+
+@keyframes waveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-wave {
+  @apply 
+  w-full  flex items-center justify-center text-white;
+  background: linear-gradient(270deg, #38bdf8, #0284c7, #38bdf8);
+  background-size: 600% 600%;
+  animation: waveGradient 12s ease infinite;
+}
 
 body {
-  background-color: $bg;
   color: #111827;
   @apply font-sans;
 }

@@ -20,10 +20,16 @@ module.exports = {
             opacity: '1',
             transform: 'translateX(0) scale(1)'
           }
+        },
+        float: {
+          '0%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0px)' },
         }
       },
       animation: {
-        fadeLeft: 'fadeLeft 2000ms cubic-bezier(0.4, 0, 0.2, 1) forwards'
+        fadeLeft: 'fadeLeft 2000ms cubic-bezier(0.4, 0, 0.2, 1) forwards',
+        float: 'float 5s ease-in-out infinite'
       }
     }
   },
