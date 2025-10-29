@@ -1,6 +1,6 @@
 import components from '@/data/components'
-import { defineAsyncComponent } from 'vue'
-import { useRouter } from 'vue-router'
+import { computed, defineAsyncComponent } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { usePageStore } from '@/stores/page'
 import { storeToRefs } from 'pinia'
 
@@ -11,10 +11,14 @@ export default {
     LandingPage: defineAsyncComponent(components.LandingPage)
   },
   setup() {
+    const route = useRoute()
     const router = useRouter()
     const pageStore = usePageStore()
     const { isLoading, isLanding } = storeToRefs(usePageStore())
     const { updateLoading, updateLanding } = pageStore
+
+    // computed
+    const onLandingPage = computed(() => route.path === '/')
 
     // methods
     const enterPage = () => {
@@ -23,10 +27,17 @@ export default {
     }
 
     router.beforeEach(() => {
+      if (onLandingPage.value) {
+        return
+      }
       updateLoading(true)
     })
 
     router.afterEach(() => {
+      if (onLandingPage.value) {
+        return
+      }
+
       setTimeout(() => {
         updateLoading(false)
       }, 300)

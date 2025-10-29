@@ -9,6 +9,21 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui']
+      },
+      keyframes: {
+        fadeLeft: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(40px) scale(0.95)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0) scale(1)'
+          }
+        }
+      },
+      animation: {
+        fadeLeft: 'fadeLeft 2000ms cubic-bezier(0.4, 0, 0.2, 1) forwards'
       }
     }
   },
