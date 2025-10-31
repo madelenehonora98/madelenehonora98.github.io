@@ -14,35 +14,28 @@ export default {
     const route = useRoute()
     const router = useRouter()
     const pageStore = usePageStore()
-    const { isLoading, isLanding } = storeToRefs(usePageStore())
+    const { isLoading } = storeToRefs(usePageStore())
     const { updateLoading } = pageStore
-
-    // computed
-    const onLandingPage = computed(() => route.meta.isLanding)
 
     // methods
 
-    router.beforeEach(() => {
-      if (onLandingPage.value) {
+   router.beforeEach((to) => {
+      if (to.meta?.isLanding) {
         return
       }
       updateLoading(true)
     })
 
-    router.afterEach(() => {
-      if (onLandingPage.value) {
-        return
-      }
-
+    router.afterEach((to) => {
       setTimeout(() => {
         updateLoading(false)
-      }, 300)
+      }, 150)
     })
+
 
     return {
       route,
-      isLoading,
-      isLanding
+      isLoading
     }
   }
 }
