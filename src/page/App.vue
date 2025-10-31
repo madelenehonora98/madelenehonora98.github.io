@@ -1,9 +1,8 @@
 <template>
   <div>
     <Loader :loading="isLoading" />
-    <LandingPage v-if="isLanding" @enterPage="enterPage"/>
-    <div class="flex flex-col md:flex-row min-h-screen" v-else>
-      <Sidebar ref="sidebar" />
+    <div class="flex flex-col md:flex-row min-h-screen">
+      <Sidebar ref="sidebar" v-if="!route.meta.isLanding" />
       <main class="flex-1 min-h-screen w-full md:w-auto">
         <!--Menu icon for mobile web-->
         <button
@@ -37,7 +36,7 @@
 <script src="./js/app.js"></script>
 
 <style lang="scss" scoped>
-@use "@/assets/css/main.scss" as *;
+@use '@/assets/css/main.scss' as *;
 
 .fade-enter-active,
 .fade-leave-active {

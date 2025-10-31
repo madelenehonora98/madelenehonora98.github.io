@@ -15,16 +15,12 @@ export default {
     const router = useRouter()
     const pageStore = usePageStore()
     const { isLoading, isLanding } = storeToRefs(usePageStore())
-    const { updateLoading, updateLanding } = pageStore
+    const { updateLoading } = pageStore
 
     // computed
-    const onLandingPage = computed(() => route.path === '/')
+    const onLandingPage = computed(() => route.meta.isLanding)
 
     // methods
-    const enterPage = () => {
-      updateLoading(true)
-      updateLanding(false)
-    }
 
     router.beforeEach(() => {
       if (onLandingPage.value) {
@@ -44,9 +40,9 @@ export default {
     })
 
     return {
-      isLoading, 
-      isLanding,
-      enterPage
+      route,
+      isLoading,
+      isLanding
     }
   }
 }

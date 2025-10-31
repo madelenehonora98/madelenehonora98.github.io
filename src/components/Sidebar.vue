@@ -56,7 +56,7 @@
 
     <nav class="flex flex-col gap-2 w-full px-4">
       <router-link
-        to="/"
+        to="/about"
         :class="[
           'flex items-center gap-3 hover:bg-sky-500 rounded-lg py-2 transition-all duration-200',
           isExpanded ? 'px-3' : 'px-2 justify-center'
